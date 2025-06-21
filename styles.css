@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.textbox {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.textbox p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.textbox a {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+.textbox a:hover {
+    text-decoration: underline;
+}
