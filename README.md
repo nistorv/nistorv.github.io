@@ -1,6 +1,6 @@
 # My Personal/Portfolio Website
 
-Made with React, TypeScript and Vite. Using it to teach myself React and TypeScript for my portfolio/CV website.
+Made with React, TypeScript, Tailwind and deployed with Vite and Github Actions. Using it to teach myself React and TypeScript for my portfolio/CV website.
 
 You can visit this site here: [nistorv.me](https://nistorv.me)
 

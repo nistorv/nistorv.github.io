@@ -5,7 +5,7 @@ export interface IconButtonProps {
 
 export function IconButton(props: IconButtonProps) {
   return (
-    <a className="p-2 flex justify-center items-center" href={props.href}>
+    <a className="flex justify-center items-center px-4 py-2" href={props.href}>
       {props.children}
     </a>
   );
