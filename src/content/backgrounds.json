@@ -1,0 +1,184 @@
+[
+  {
+    "id": "berlin_night",
+    "name": "Berlin, Germany",
+    "localName": "Berlin, Deutschland",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "blvd_stefan_cel_mare_si_sfant",
+    "name": "Bulevardul Ștefan cel Mare și Sfânt",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "bmw_welt",
+    "name": "BMW Welt",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "brasov",
+    "name": "Brașov",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "brasov_old_town",
+    "name": "Brașov Old Town",
+    "localName": "Brașov Centrul Vechi",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "bukovina_museum",
+    "name": "National Museum of Bucovina",
+    "localName": "Muzeul Național al Bucovinei",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "cluj",
+    "name": "Cluj-Napoca, Romania",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "docklands_melb",
+    "name": "Melbourne, Australia",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "erfurt_cathedral",
+    "name": "Erfurt Cathedral",
+    "localName": "Hohe Domkirche St. Marien zu Erfurt",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "frankfurt_airport",
+    "name": "Frankfurt Airport",
+    "localName": "Flughafen Frankfurt",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "friedrichsbrucke",
+    "name": "Friedrichsbrücke",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "georg_brauchle_ring",
+    "name": "Georg-Brauchle-Ring",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "gosport",
+    "name": "Gosport, United Kingdom",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "hauptwache",
+    "name": "Frankfurt, Germany",
+    "localName": "Frankfurt am Main, Deutschland",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "mt_eden",
+    "name": "Mt. Eden",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "munich",
+    "name": "Munich, Germany",
+    "localName": "München, Deutschland",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "north_canterbury",
+    "name": "North Canterbury, New Zealand",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "pergamonmuseum",
+    "name": "Pergamonmuseum",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "piata_sfanta_vineri",
+    "name": "Piața Sfânta Vineri",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "plerin",
+    "name": "Plérin, France",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "releu_bucium",
+    "name": "Bucium Relay",
+    "localName": "Releu Bucium",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "royal_garrison_church_portsmouth",
+    "name": "Royal Garrison Church",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "saint_brieuc",
+    "name": "Saint-Brieuc, France",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "tarom",
+    "name": "Iași International Airport",
+    "localName": "Aeroportul Internațional Iași",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "tiergarten_soviet_memorial",
+    "name": "Soviet War Memorial Tiergarten",
+    "localName": "Sowjetisches Ehrenmal im Tiergarten",
+    "lat": 0,
+    "lon": 0
+  },
+  {
+    "id": "trafalgar_square",
+    "name": "Trafalgar Square",
+    "localName": false,
+    "lat": 0,
+    "lon": 0
+  }
+]
