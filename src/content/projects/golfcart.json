@@ -1,0 +1,15 @@
+{
+  "title": "Golf Cart Legacy",
+  "description": "Racing sim game with vehicle upgrade, economy, AI opponents and differing tracks. Built collaboratively with [Tom Eggers](https://tomeggers.github.io/) for our introductory Java/Software Engineering course.",
+  "technologies": [
+    "Java",
+    "JavaFX",
+    "JUnit"
+  ],
+  "links": {
+    "github": "https://github.com/nistorv/racing-game",
+    "live": false
+  },
+  "projectPurpose": "SENG201 @ University of Canterbury",
+  "priority": 10
+}

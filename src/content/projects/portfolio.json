@@ -1,0 +1,15 @@
+{
+  "title": "Portfolio Website",
+  "description": "My portfolio website, showcasing my professional identity as well as serving as a general playground for playing around with stuff on the web.",
+  "technologies": [
+    "TypeScript",
+    "React",
+    "Github Actions"
+  ],
+  "links": {
+    "github": "https://github.com/nistorv/nistorv.github.io",
+    "live": "https://nistorv.me"
+  },
+  "projectPurpose": false,
+  "priority": 1
+}

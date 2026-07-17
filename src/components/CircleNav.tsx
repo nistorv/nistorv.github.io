@@ -4,8 +4,9 @@ export interface NavButton {
 }
 
 export interface CircleNavProps {
-  name: string;
+  title: string;
   buttons: NavButton[];
+  isName?: boolean;
 }
 
 export function CircleNav(props: CircleNavProps) {
@@ -16,8 +17,10 @@ export function CircleNav(props: CircleNavProps) {
   const ringInnerRadius = 95;
   const outerRadius = 125;
 
-  const firstName = props.name.split(" ")[0];
-  const lastName = props.name.split(" ")[1];
+  const svgPadding = 10;
+  const viewBoxX = centerX - outerRadius - svgPadding;
+  const viewBoxY = centerY - outerRadius - svgPadding;
+  const svgSize = (outerRadius + svgPadding) * 2;
 
   const total = props.buttons.length;
   const angleStep = 360 / total;
@@ -54,7 +57,7 @@ export function CircleNav(props: CircleNavProps) {
 
   return (
     <div className="flex justify-center items-center">
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+      <svg width={svgSize} height={svgSize} viewBox={`${viewBoxX} ${viewBoxY} ${svgSize} ${svgSize}`}>
         <defs>
           <filter id="shadow">
             <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.1" />
@@ -74,24 +77,40 @@ export function CircleNav(props: CircleNavProps) {
           filter="url(#shadow)"
         />
 
-        <text
-          x={centerX}
-          y={centerY - 15}
-          textAnchor="middle"
-          dominantBaseline="middle"
-          className="text-3xl font-bold fill-slate-800 font-sans"
-        >
-          {firstName}
-        </text>
-        <text
-          x={centerX}
-          y={centerY + 20}
-          textAnchor="middle"
-          dominantBaseline="middle"
-          className="text-3xl font-bold fill-slate-800 font-sans"
-        >
-          {lastName}
-        </text>
+        {props.isName && (
+          <>
+            <text
+              x={centerX}
+              y={centerY - 15}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              className="text-3xl font-bold fill-slate-800 font-sans"
+            >
+              {props.title.split(" ")[0]}
+            </text>
+            <text
+              x={centerX}
+              y={centerY + 20}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              className="text-3xl font-bold fill-slate-800 font-sans"
+            >
+              {props.title.split(" ")[1]}
+            </text>
+          </>
+        )}
+        {!props.isName && (
+          <text
+            x={centerX}
+            y={centerY}
+            textAnchor="middle"
+            dominantBaseline="middle"
+            className="text-3xl font-bold fill-slate-800 font-sans"
+          >
+            {props.title}
+          </text>
+        )}
+
 
         {ringButtons.map((button, index) => {
           const textRadius = (ringInnerRadius + outerRadius) / 2;

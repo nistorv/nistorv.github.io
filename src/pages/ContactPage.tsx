@@ -7,7 +7,8 @@ export function ContactPage() {
 
   return (
     <CircleNav
-      name="Vlad Nistor"
+      title="Vlad Nistor"
+      isName
       buttons={[
         { label: "LinkedIn", onClick: navLinkedIn },
         { label: "Github", onClick: navGithub },

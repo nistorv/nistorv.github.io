@@ -6,7 +6,7 @@ export function GalleryPage() {
 
   return (
     <CircleNav
-      name="Gallery"
+      title="Gallery"
       buttons={[
         { label: "TBD", onClick: () => {} },
         { label: "TBD", onClick: () => {} },

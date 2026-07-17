@@ -1,0 +1,15 @@
+{
+  "title": "trvl365",
+  "description": "Travel Blogging Website created for my web application development course in two parts.\n- Assignment 1: REST API Backend, with endpoints provided that needed implementation\n- Assignment 2: Frontend, implementing provided user stories and AC's.",
+  "technologies": [
+    "TypeScript",
+    "Express",
+    "React"
+  ],
+  "links": {
+    "github": false,
+    "live": false
+  },
+  "projectPurpose": "SENG365 @ University of Canterbury",
+  "priority": 9
+}

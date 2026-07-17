@@ -6,11 +6,10 @@ export function HomePage() {
 
   return (
     <CircleNav
-      name="Vlad Nistor"
+      title="Vlad Nistor"
+      isName={true}
       buttons={[
         { label: "Projects", onClick: () => navigate("/projects") },
-        { label: "Gallery", onClick: () => navigate("/gallery") },
-        { label: "TBD", onClick: () => {} },
         { label: "Contact", onClick: () => navigate("/contact") },
       ]}
     />
