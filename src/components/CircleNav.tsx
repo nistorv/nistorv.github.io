@@ -1,9 +1,11 @@
+export interface NavButton {
+  label: string;
+  onClick?: () => void;
+}
+
 export interface CircleNavProps {
   name: string;
-  onLinkedInClick?: () => void;
-  onGithubClick?: () => void;
-  onEmailClick?: () => void;
-  onMoreClick?: () => void;
+  buttons: NavButton[];
 }
 
 export function CircleNav(props: CircleNavProps) {
@@ -16,6 +18,16 @@ export function CircleNav(props: CircleNavProps) {
 
   const firstName = props.name.split(" ")[0];
   const lastName = props.name.split(" ")[1];
+
+  const total = props.buttons.length;
+  const angleStep = 360 / total;
+  const startOffset = -180;
+
+  const ringButtons = props.buttons.map((btn, i) => ({
+    ...btn,
+    startAngle: startOffset + i * angleStep,
+    endAngle: startOffset + (i + 1) * angleStep,
+  }));
 
   const createQuarterPath = (startAngle: number, endAngle: number) => {
     const startAngleRad = (startAngle * Math.PI) / 180;
@@ -40,46 +52,15 @@ export function CircleNav(props: CircleNavProps) {
     `;
   };
 
-  const ringButtons = [
-    {
-      label: "LinkedIn",
-      startAngle: -180,
-      endAngle: -90,
-      onClick: props.onLinkedInClick,
-    },
-    {
-      label: "Github",
-      startAngle: -90,
-      endAngle: 0,
-      onClick: props.onGithubClick,
-    },
-    {
-      label: "More",
-      startAngle: 0,
-      endAngle: 90,
-      onClick: props.onMoreClick,
-    },
-    {
-      label: "E-mail",
-      startAngle: 90,
-      endAngle: 180,
-      onClick: props.onEmailClick,
-    },
-  ];
-
   return (
     <div className="flex justify-center items-center">
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-        {/* center circle stuff */}
         <defs>
           <filter id="shadow">
             <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.1" />
           </filter>
           <filter id="ringShadow">
             <feDropShadow dx="0" dy="2" stdDeviation="4" floodOpacity="0.15" />
-          </filter>
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
           </filter>
         </defs>
 
@@ -112,7 +93,6 @@ export function CircleNav(props: CircleNavProps) {
           {lastName}
         </text>
 
-        {/* outer ring buttons */}
         {ringButtons.map((button, index) => {
           const textRadius = (ringInnerRadius + outerRadius) / 2;
           const pathId = `textPath-${index}`;
@@ -121,7 +101,6 @@ export function CircleNav(props: CircleNavProps) {
 
           let textPath;
           if (isBottomQuarter) {
-            // bottom half of ring text flipped for better reading ye ye
             const textArcStartAngle = ((button.endAngle - 5) * Math.PI) / 180;
             const textArcEndAngle = ((button.startAngle + 5) * Math.PI) / 180;
             const x1 = centerX + textRadius * Math.cos(textArcStartAngle);
