@@ -1,9 +1,14 @@
+import { motion } from "framer-motion";
+
+export interface NavButton {
+  label: string;
+  onClick?: () => void;
+}
+
 export interface CircleNavProps {
-  name: string;
-  onLinkedInClick?: () => void;
-  onGithubClick?: () => void;
-  onEmailClick?: () => void;
-  onMoreClick?: () => void;
+  title: string;
+  buttons: NavButton[];
+  isName?: boolean;
 }
 
 export function CircleNav(props: CircleNavProps) {
@@ -14,8 +19,20 @@ export function CircleNav(props: CircleNavProps) {
   const ringInnerRadius = 95;
   const outerRadius = 125;
 
-  const firstName = props.name.split(" ")[0];
-  const lastName = props.name.split(" ")[1];
+  const svgPadding = 10;
+  const viewBoxX = centerX - outerRadius - svgPadding;
+  const viewBoxY = centerY - outerRadius - svgPadding;
+  const svgSize = (outerRadius + svgPadding) * 2;
+
+  const total = props.buttons.length;
+  const angleStep = 360 / total;
+  const startOffset = -180;
+
+  const ringButtons = props.buttons.map((btn, i) => ({
+    ...btn,
+    startAngle: startOffset + i * angleStep,
+    endAngle: startOffset + (i + 1) * angleStep,
+  }));
 
   const createQuarterPath = (startAngle: number, endAngle: number) => {
     const startAngleRad = (startAngle * Math.PI) / 180;
@@ -40,46 +57,15 @@ export function CircleNav(props: CircleNavProps) {
     `;
   };
 
-  const ringButtons = [
-    {
-      label: "LinkedIn",
-      startAngle: -180,
-      endAngle: -90,
-      onClick: props.onLinkedInClick,
-    },
-    {
-      label: "Github",
-      startAngle: -90,
-      endAngle: 0,
-      onClick: props.onGithubClick,
-    },
-    {
-      label: "More",
-      startAngle: 0,
-      endAngle: 90,
-      onClick: props.onMoreClick,
-    },
-    {
-      label: "E-mail",
-      startAngle: 90,
-      endAngle: 180,
-      onClick: props.onEmailClick,
-    },
-  ];
-
   return (
     <div className="flex justify-center items-center">
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-        {/* center circle stuff */}
+      <svg width={svgSize} height={svgSize} viewBox={`${viewBoxX} ${viewBoxY} ${svgSize} ${svgSize}`}>
         <defs>
           <filter id="shadow">
             <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.1" />
           </filter>
           <filter id="ringShadow">
             <feDropShadow dx="0" dy="2" stdDeviation="4" floodOpacity="0.15" />
-          </filter>
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
           </filter>
         </defs>
 
@@ -93,26 +79,53 @@ export function CircleNav(props: CircleNavProps) {
           filter="url(#shadow)"
         />
 
-        <text
-          x={centerX}
-          y={centerY - 15}
-          textAnchor="middle"
-          dominantBaseline="middle"
-          className="text-3xl font-bold fill-slate-800 font-sans"
-        >
-          {firstName}
-        </text>
-        <text
-          x={centerX}
-          y={centerY + 20}
-          textAnchor="middle"
-          dominantBaseline="middle"
-          className="text-3xl font-bold fill-slate-800 font-sans"
-        >
-          {lastName}
-        </text>
+        {props.isName && (
+          <>
+            <motion.text
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.25, delay: 0 } }}
+              transition={{ duration: 0.35, delay: 0.1 }}
+              x={centerX}
+              y={centerY - 15}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              className="text-3xl font-bold fill-slate-800 font-sans"
+            >
+              {props.title.split(" ")[0]}
+            </motion.text>
+            <motion.text
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.25, delay: 0 } }}
+              transition={{ duration: 0.35, delay: 0.1 }}
+              x={centerX}
+              y={centerY + 20}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              className="text-3xl font-bold fill-slate-800 font-sans"
+            >
+              {props.title.split(" ")[1]}
+            </motion.text>
+          </>
+        )}
+        {!props.isName && (
+          <motion.text
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.25, delay: 0 } }}
+            transition={{ duration: 0.35, delay: 0.1 }}
+            x={centerX}
+            y={centerY}
+            textAnchor="middle"
+            dominantBaseline="middle"
+            className="text-3xl font-bold fill-slate-800 font-sans"
+          >
+            {props.title}
+          </motion.text>
+        )}
 
-        {/* outer ring buttons */}
+
         {ringButtons.map((button, index) => {
           const textRadius = (ringInnerRadius + outerRadius) / 2;
           const pathId = `textPath-${index}`;
@@ -121,7 +134,6 @@ export function CircleNav(props: CircleNavProps) {
 
           let textPath;
           if (isBottomQuarter) {
-            // bottom half of ring text flipped for better reading ye ye
             const textArcStartAngle = ((button.endAngle - 5) * Math.PI) / 180;
             const textArcEndAngle = ((button.startAngle + 5) * Math.PI) / 180;
             const x1 = centerX + textRadius * Math.cos(textArcStartAngle);
@@ -140,7 +152,19 @@ export function CircleNav(props: CircleNavProps) {
           }
 
           return (
-            <g key={index} className="group">
+            <motion.g
+              key={index}
+              className="group"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 350,
+                damping: 17,
+                delay: 0.1 + index * 0.05,
+                opacity: { duration: 0.25, delay: 0.1 + index * 0.05 },
+              }}
+            >
               <path
                 d={createQuarterPath(button.startAngle, button.endAngle)}
                 fill="#f1f5f9"
@@ -162,7 +186,7 @@ export function CircleNav(props: CircleNavProps) {
                   {button.label.toUpperCase()}
                 </textPath>
               </text>
-            </g>
+            </motion.g>
           );
         })}
       </svg>

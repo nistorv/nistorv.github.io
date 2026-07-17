@@ -1,0 +1,14 @@
+{
+  "title": "Expiry Date Tracker",
+  "description": "Track your item's expiry dates with this app. Built as the individual project for my Mobile App Development course.",
+  "technologies": [
+    "Kotlin",
+    "Android Studio"
+  ],
+  "links": {
+    "github": "https://github.com/nistorv/expiry-date-tracker",
+    "live": false
+  },
+  "projectPurpose": "SENG303 @ University of Canterbury",
+  "priority": 11
+}

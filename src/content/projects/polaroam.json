@@ -1,0 +1,16 @@
+{
+  "title": "Polaroam",
+  "description": "A feature-rich travel diary that tracks, visualise and create with your trips. Currently creating alongside 5 other developers as part of a whole year software development class.",
+  "technologies": [
+    "C#",
+    ".dotnet",
+    "Svelte",
+    "PostgreSQL"
+  ],
+  "links": {
+    "github": false,
+    "live": false
+  },
+  "projectPurpose": "SENG302 @ University of Canterbury",
+  "priority": 2
+}

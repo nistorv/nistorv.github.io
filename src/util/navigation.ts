@@ -1,12 +1,11 @@
-export const navLinkedIn = () => {
+export function navLinkedIn(): void {
     window.open("https://www.linkedin.com/in/nistorv");
 }
 
-export const navGithub = () => {
-    window.open("https://github.com/nistorv", "_blank");
+export function navGithub(): void {
+    window.open("https://github.com/nistorv");
 }
 
-export const navEmail = () => {
+export function navEmail(): void {
     window.location.href = "mailto:nistorv@proton.me";
-
 }
