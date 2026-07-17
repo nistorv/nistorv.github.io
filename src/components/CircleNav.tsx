@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export interface NavButton {
   label: string;
   onClick?: () => void;
@@ -79,7 +81,11 @@ export function CircleNav(props: CircleNavProps) {
 
         {props.isName && (
           <>
-            <text
+            <motion.text
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.25, delay: 0 } }}
+              transition={{ duration: 0.35, delay: 0.1 }}
               x={centerX}
               y={centerY - 15}
               textAnchor="middle"
@@ -87,8 +93,12 @@ export function CircleNav(props: CircleNavProps) {
               className="text-3xl font-bold fill-slate-800 font-sans"
             >
               {props.title.split(" ")[0]}
-            </text>
-            <text
+            </motion.text>
+            <motion.text
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.25, delay: 0 } }}
+              transition={{ duration: 0.35, delay: 0.1 }}
               x={centerX}
               y={centerY + 20}
               textAnchor="middle"
@@ -96,11 +106,15 @@ export function CircleNav(props: CircleNavProps) {
               className="text-3xl font-bold fill-slate-800 font-sans"
             >
               {props.title.split(" ")[1]}
-            </text>
+            </motion.text>
           </>
         )}
         {!props.isName && (
-          <text
+          <motion.text
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.25, delay: 0 } }}
+            transition={{ duration: 0.35, delay: 0.1 }}
             x={centerX}
             y={centerY}
             textAnchor="middle"
@@ -108,7 +122,7 @@ export function CircleNav(props: CircleNavProps) {
             className="text-3xl font-bold fill-slate-800 font-sans"
           >
             {props.title}
-          </text>
+          </motion.text>
         )}
 
 
@@ -138,7 +152,19 @@ export function CircleNav(props: CircleNavProps) {
           }
 
           return (
-            <g key={index} className="group">
+            <motion.g
+              key={index}
+              className="group"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 350,
+                damping: 17,
+                delay: 0.1 + index * 0.05,
+                opacity: { duration: 0.25, delay: 0.1 + index * 0.05 },
+              }}
+            >
               <path
                 d={createQuarterPath(button.startAngle, button.endAngle)}
                 fill="#f1f5f9"
@@ -160,7 +186,7 @@ export function CircleNav(props: CircleNavProps) {
                   {button.label.toUpperCase()}
                 </textPath>
               </text>
-            </g>
+            </motion.g>
           );
         })}
       </svg>
