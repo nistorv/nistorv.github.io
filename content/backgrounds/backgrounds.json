@@ -3,43 +3,43 @@
     "id": "berlin_night",
     "name": "Berlin, Germany",
     "localName": "Berlin, Deutschland",
-    "lat": 0,
-    "lon": 0
+    "lat": 52.520775,
+    "lon": 13.409514
   },
   {
     "id": "blvd_stefan_cel_mare_si_sfant",
     "name": "Bulevardul Ștefan cel Mare și Sfânt",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 47.160869,
+    "lon": 27.584136
   },
   {
     "id": "bmw_welt",
     "name": "BMW Welt",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 48.177075,
+    "lon": 11.558228
   },
   {
     "id": "brasov",
     "name": "Brașov",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 45.634792,
+    "lon": 25.593614
   },
   {
     "id": "brasov_old_town",
     "name": "Brașov Old Town",
     "localName": "Brașov Centrul Vechi",
-    "lat": 0,
-    "lon": 0
+    "lat": 45.641517,
+    "lon": 25.587856
   },
   {
     "id": "bukovina_museum",
     "name": "National Museum of Bucovina",
     "localName": "Muzeul Național al Bucovinei",
-    "lat": 0,
-    "lon": 0
+    "lat": 47.641369,
+    "lon": 26.257242
   },
   {
     "id": "cluj",
