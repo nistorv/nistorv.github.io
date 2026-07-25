@@ -1,4 +1,4 @@
-import backgroundData from "../../content/backgrounds.json";
+import backgroundData from "../../content/backgrounds/backgrounds.json";
 
 export interface BackgroundMetadata {
   id: string;
@@ -9,7 +9,7 @@ export interface BackgroundMetadata {
   url: string;
 }
 
-const imageModules = import.meta.glob("../assets/backgrounds/*", {
+const imageModules = import.meta.glob("../../content/backgrounds/images/*", {
   eager: true,
   import: "default",
 }) as {
