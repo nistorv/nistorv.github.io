@@ -1,0 +1,15 @@
+{
+  "title": "TrustEd",
+  "description": "A decentralized, DAO-verified credential registry that proves your degree is real without ever exposing your data on-chain.\n\n Built collaboratively for the Christchurch Web3 Hackathon with:\n - [Sienna Robinson](https://github.com/itzsiennaduh) · [Ed Leonard](https://edleonard.dev/) · [Siegfried Weigler-Harding](https://github.com/walkingAroundsoMuch)\n- [Reuben Donnison](https://reujdon.dev/) · [Darsh Gandhi](https://darshgandhi.dev/)",
+  "technologies": [
+    "Solidity",
+    "DAO",
+    "Blockchain"
+  ],
+  "links": {
+    "github": "https://github.com/Darsh-0/TrustEd",
+    "live": false
+  },
+  "projectPurpose": "2026 Christchurch Web3 Hackathon",
+  "priority": 13
+}

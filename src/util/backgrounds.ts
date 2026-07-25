@@ -1,4 +1,4 @@
-import backgroundData from "../content/backgrounds.json";
+import backgroundData from "../../content/backgrounds.json";
 
 export interface BackgroundMetadata {
   id: string;
