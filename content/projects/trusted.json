@@ -8,8 +8,8 @@
   ],
   "links": {
     "github": "https://github.com/Darsh-0/TrustEd",
-    "live": false
+    "live": "https://web3-hackathon-8kad.vercel.app/"
   },
   "projectPurpose": "2026 Christchurch Web3 Hackathon",
-  "priority": 13
+  "priority": 9
 }

@@ -45,57 +45,57 @@
     "id": "cluj",
     "name": "Cluj-Napoca, Romania",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 46.766689,
+    "lon": 23.598519
   },
   {
     "id": "docklands_melb",
     "name": "Melbourne, Australia",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": -37.819419,
+    "lon": 144.965164
   },
   {
     "id": "erfurt_cathedral",
     "name": "Erfurt Cathedral",
     "localName": "Hohe Domkirche St. Marien zu Erfurt",
-    "lat": 0,
-    "lon": 0
+    "lat": 50.977700,
+    "lon": 11.021033
   },
   {
     "id": "frankfurt_airport",
     "name": "Frankfurt Airport",
     "localName": "Flughafen Frankfurt",
-    "lat": 0,
-    "lon": 0
+    "lat": 50.054828,
+    "lon": 8.586881
   },
   {
     "id": "friedrichsbrucke",
     "name": "Friedrichsbrücke",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 52.520503,
+    "lon": 13.400425
   },
   {
     "id": "georg_brauchle_ring",
     "name": "Georg-Brauchle-Ring",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 48.176144,
+    "lon": 11.557758
   },
   {
     "id": "gosport",
     "name": "Gosport, United Kingdom",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 50.795533,
+    "lon": -1.108475
   },
   {
     "id": "hauptwache",
     "name": "Frankfurt, Germany",
     "localName": "Frankfurt am Main, Deutschland",
-    "lat": 0,
-    "lon": 0
+    "lat": 50.113892,
+    "lon": 8.679908
   },
   {
     "id": "mt_eden",
@@ -108,77 +108,77 @@
     "id": "munich",
     "name": "Munich, Germany",
     "localName": "München, Deutschland",
-    "lat": 0,
-    "lon": 0
+    "lat": 48.174347,
+    "lon": 11.553753
   },
   {
     "id": "north_canterbury",
     "name": "North Canterbury, New Zealand",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": -42.1051043,
+    "lon": 173.6567316
   },
   {
     "id": "pergamonmuseum",
     "name": "Pergamonmuseum",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 52.518589,
+    "lon": 13.400269
   },
   {
     "id": "piata_sfanta_vineri",
     "name": "Piața Sfânta Vineri",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 47.160622,
+    "lon": 27.590856
   },
   {
     "id": "plerin",
     "name": "Plérin, France",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 48.528631,
+    "lon": -2.750647
   },
   {
     "id": "releu_bucium",
     "name": "Bucium Relay",
     "localName": "Releu Bucium",
-    "lat": 0,
-    "lon": 0
+    "lat": 47.089583,
+    "lon": 27.643528
   },
   {
     "id": "royal_garrison_church_portsmouth",
     "name": "Royal Garrison Church",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 50.788794,
+    "lon": -1.104964
   },
   {
     "id": "saint_brieuc",
     "name": "Saint-Brieuc, France",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 48.521278,
+    "lon": -2.753331
   },
   {
     "id": "tarom",
     "name": "Iași International Airport",
     "localName": "Aeroportul Internațional Iași",
-    "lat": 0,
-    "lon": 0
+    "lat": 47.176700,
+    "lon": 27.617586
   },
   {
     "id": "tiergarten_soviet_memorial",
     "name": "Soviet War Memorial Tiergarten",
     "localName": "Sowjetisches Ehrenmal im Tiergarten",
-    "lat": 0,
-    "lon": 0
+    "lat": 52.516117,
+    "lon": 13.372081
   },
   {
     "id": "trafalgar_square",
     "name": "Trafalgar Square",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": 51.508286,
+    "lon": -0.128572
   }
 ]
