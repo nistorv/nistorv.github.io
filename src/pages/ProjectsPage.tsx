@@ -4,9 +4,12 @@ import { CircleNav } from "../components/CircleNav";
 import { ProjectCard, type ProjectData } from "../components/ProjectCard";
 import { navGithub } from "../util/navigation.ts";
 
-const projectModules = import.meta.glob("../content/projects/*.json", { eager: true });
-const projects = (Object.values(projectModules) as ProjectData[])
-  .sort((a, b) => a.priority - b.priority);
+const projectModules = import.meta.glob("../../content/projects/*.json", {
+  eager: true,
+});
+const projects = (Object.values(projectModules) as ProjectData[]).sort(
+  (a, b) => a.priority - b.priority,
+);
 
 export function ProjectsPage() {
   const navigate = useNavigate();
