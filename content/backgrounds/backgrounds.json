@@ -22,7 +22,7 @@
   },
   {
     "id": "brasov",
-    "name": "Brașov",
+    "name": "Brașov, Romania",
     "localName": false,
     "lat": 45.634792,
     "lon": 25.593614
@@ -64,8 +64,8 @@
   },
   {
     "id": "frankfurt_airport",
-    "name": "Frankfurt Airport",
-    "localName": "Flughafen Frankfurt",
+    "name": "Kapitän-Lehmann-Straße",
+    "localName": false,
     "lat": 50.054828,
     "lon": 8.586881
   },
@@ -99,10 +99,10 @@
   },
   {
     "id": "mt_eden",
-    "name": "Mt. Eden",
+    "name": "Mount Eden, New Zealand",
     "localName": false,
-    "lat": 0,
-    "lon": 0
+    "lat": -36.877906,
+    "lon": 174.765014
   },
   {
     "id": "munich",
@@ -180,5 +180,26 @@
     "localName": false,
     "lat": 51.508286,
     "lon": -0.128572
+  },
+  {
+    "id": "arthurs_pass",
+    "name": "Arthur's Pass, New Zealand",
+    "localName": false,
+    "lat": -43.018394,
+    "lon": 171.595108
+  },
+  {
+    "id": "green_park",
+    "name": "Green Park Tube Station",
+    "localName": false,
+    "lat": 51.511464,
+    "lon": -0.153500
+  },
+  {
+    "id": "mt_vic_lookout",
+    "name": "Mount Victoria Lookout",
+    "localName": false,
+    "lat": -41.296008,
+    "lon": 174.794281
   }
 ]

@@ -5,6 +5,7 @@ import { ContactPage } from "./pages/ContactPage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { GalleryPage } from "./pages/GalleryPage";
 import { PageLayout } from "./components/PageLayout";
+import { SettingsProvider } from "./context/SettingsContext";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -23,9 +24,11 @@ function AnimatedRoutes() {
 function App() {
   return (
     <HashRouter>
-      <PageLayout>
-        <AnimatedRoutes />
-      </PageLayout>
+      <SettingsProvider>
+        <PageLayout>
+          <AnimatedRoutes />
+        </PageLayout>
+      </SettingsProvider>
     </HashRouter>
   );
 }
