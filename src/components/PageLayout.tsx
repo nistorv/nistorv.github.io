@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { getBackground } from "../util/backgrounds";
 import type { BackgroundMetadata } from "../util/backgrounds";
 import { BackgroundDescriptor } from "./BackgroundDescriptor";
+import { useSettings } from "../context/SettingsContext";
 
 export interface PageLayoutProps {
   children: React.ReactNode;
@@ -12,9 +13,15 @@ export function PageLayout(props: PageLayoutProps) {
   const [background, setBackground] = useState<BackgroundMetadata>(() =>
     getBackground()
   );
+  const { bgTimingsMs } = useSettings();
 
   useEffect(() => {
+    if (bgTimingsMs === null) {
+      return;
+    }
+
     let cancelled = false;
+
     const timer = setInterval(() => {
       const next = getBackground(background.id);
       const preload = new Image();
@@ -24,12 +31,14 @@ export function PageLayout(props: PageLayoutProps) {
           setBackground(next);
         }
       };
-    }, 60000);
+    }, bgTimingsMs);
+
     return () => {
       cancelled = true;
       clearInterval(timer);
     };
-  }, [background.id]);
+
+  }, [background.id, bgTimingsMs]);
 
   return (
     <div className="relative w-screen h-screen overflow-hidden">
