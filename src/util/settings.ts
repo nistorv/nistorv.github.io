@@ -3,11 +3,11 @@ export interface timings {
     ms: number | null;
 }
 
-function secsToMs(time: number) {
+export function secsToMs(time: number) {
     return time * 1000;
 }
 
-function minsToMs(time: number) {
+export function minsToMs(time: number) {
     return secsToMs(time * 60);
 }
 

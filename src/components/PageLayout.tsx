@@ -6,6 +6,10 @@ import type { BackgroundMetadata } from "../util/backgrounds";
 import { BackgroundDescriptor } from "./BackgroundDescriptor";
 import { TvLayout } from "./TvOverlay";
 import { useSettings } from "../context/SettingsContext";
+import tvData from "../../content/tv.json";
+import {minsToMs} from "../util/settings.ts";
+
+const TV_BG_INTERVAL_MS = minsToMs(tvData.bgInterval);
 
 export interface PageLayoutProps {
   children: React.ReactNode;
@@ -18,9 +22,10 @@ export function PageLayout(props: PageLayoutProps) {
   const { bgTimingsMs } = useSettings();
 
   const isTv = useLocation().pathname === "/tv";
+  const intervalMs = isTv ? TV_BG_INTERVAL_MS : bgTimingsMs;
 
   useEffect(() => {
-    if (bgTimingsMs === null) {
+    if (intervalMs === null) {
       return;
     }
 
@@ -35,14 +40,14 @@ export function PageLayout(props: PageLayoutProps) {
           setBackground(next);
         }
       };
-    }, bgTimingsMs);
+    }, intervalMs);
 
     return () => {
       cancelled = true;
       clearInterval(timer);
     };
 
-  }, [background.id, bgTimingsMs]);
+  }, [background.id, intervalMs]);
 
   return (
     <div className="relative w-screen h-screen overflow-hidden">

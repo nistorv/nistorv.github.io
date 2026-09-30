@@ -5,5 +5,6 @@
     { "label": "Bucharest", "timeZone": "Europe/Bucharest" },
     { "label": "Berlin", "timeZone": "Europe/Berlin" }
   ],
-  "weather": { "label": "Christchurch", "lat": -43.5321, "lon": 172.6362, "refreshMinutes": 15 }
+  "weather": { "label": "Christchurch", "lat": -43.5321, "lon": 172.6362, "refreshMinutes": 15 },
+  "bgInterval": 1
 }
