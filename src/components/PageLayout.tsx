@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { getBackground } from "../util/backgrounds";
 import type { BackgroundMetadata } from "../util/backgrounds";
 import { BackgroundDescriptor } from "./BackgroundDescriptor";
+import { TvLayout } from "./TvOverlay";
 import { useSettings } from "../context/SettingsContext";
 
 export interface PageLayoutProps {
@@ -14,6 +16,8 @@ export function PageLayout(props: PageLayoutProps) {
     getBackground()
   );
   const { bgTimingsMs } = useSettings();
+
+  const isTv = useLocation().pathname === "/tv";
 
   useEffect(() => {
     if (bgTimingsMs === null) {
@@ -60,7 +64,11 @@ export function PageLayout(props: PageLayoutProps) {
       <div className="relative w-full h-full flex justify-center items-center">
         {props.children}
       </div>
-      <BackgroundDescriptor background={background} />
+      {isTv ? (
+        <TvLayout background={background} />
+      ) : (
+        <BackgroundDescriptor background={background} />
+      )}
     </div>
   );
 }
