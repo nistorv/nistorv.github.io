@@ -1,0 +1,15 @@
+{
+    "title": "CaptureView",
+    "description": "App that streams live video from a capture card in a window at relatively low latency.",
+    "technologies": [
+        "C#",
+        ".dotnet",
+        "WinUI"
+    ],
+    "links": {
+        "github": "https://github.com/nistorv/CaptureView/",
+        "live": false
+    },
+    "projectPurpose": false,
+    "priority": 30
+}
