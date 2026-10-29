@@ -27,7 +27,7 @@ export function ProjectCard(props: ProjectCardProps) {
     <div className="bg-white/30 border-2 border-white/40 rounded-xl p-4 backdrop-blur-sm flex gap-4">
       <div className="flex-1">
         <h3 className="text-slate-800 font-semibold text-lg">{props.project.title}</h3>
-        <div className="text-slate-600 text-sm mt-1 [&_a]:underline [&_a]:text-slate-700 [&_a:hover]:text-indigo-800">
+        <div className="text-slate-600 text-sm mt-1 [&_p+p]:mt-2 [&_a]:underline [&_a]:text-slate-700 [&_a:hover]:text-indigo-800">
           <Markdown>{props.project.description}</Markdown>
         </div>
         <p className="text-slate-600 text-xs mt-2">{techLine}</p>

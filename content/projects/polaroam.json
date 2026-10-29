@@ -1,6 +1,6 @@
 {
   "title": "Polaroam",
-  "description": "A feature-rich travel diary that tracks, visualise and create with your trips. Currently creating alongside 5 other developers as part of a whole year software development class.",
+  "description": "A feature-rich travel diary that tracks, visualise and create with your trips. Created alongside 5 other developers as part of a whole year software development class.\n\n*Note: The live version of the website may get taken down at any point (probably around late Jan 2027) including any saved trips, posts, photos, etc. Just providing the live link while the university is still hosting our projects.*",
   "technologies": [
     "C#",
     ".dotnet",
@@ -8,8 +8,8 @@
     "PostgreSQL"
   ],
   "links": {
-    "github": false,
-    "live": false
+    "github": "https://github.com/2026-SENG302-team700/Polaroam",
+    "live": "https://csse-seng302-team700.canterbury.ac.nz/prod/"
   },
   "projectPurpose": "SENG302 @ University of Canterbury",
   "priority": 10
